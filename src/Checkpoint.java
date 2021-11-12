@@ -16,8 +16,8 @@ public class Checkpoint {
 		 * Using streams, perform the following:
 		 * 
 		 * 1. Print the entire list.
-		 * 
-		 * 
+		 *
+		 *
 		 * 2. Print the miles per gallon of each entry.
 		 * 
 		 * 
@@ -29,6 +29,8 @@ public class Checkpoint {
 		 * 
 		 * 5. Print only the cars with "toyota" in the name.
 		 */
+		ArrayList<CarMPGEntry> arey = readCarMPGEntryDataFromFile();
+		Stream<CarMPGEntry> strem = arey.stream();
 		
 		
 	}
