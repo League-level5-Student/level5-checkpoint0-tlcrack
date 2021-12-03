@@ -30,22 +30,24 @@ public class Checkpoint {
 		 * 5. Print only the cars with "toyota" in the name.
 		 */
 		ArrayList<CarMPGEntry> arey = readCarMPGEntryDataFromFile();
-		Stream<CarMPGEntry> strem = arey.stream();
+		Stream<CarMPGEntry> strem = arey.stream(); //#1
 		
 		strem.forEach((s)->{
 			System.out.println(s);
 		});
-		Stream<CarMPGEntry> stram = arey.stream();
+		Stream<CarMPGEntry> stram = arey.stream(); //#2
 		stram.forEach((s)->{
 			System.out.println(s.mpg);
 		});
-		Stream<CarMPGEntry> strom = arey.stream();
+		Stream<CarMPGEntry> strom = arey.stream(); //#3
 		Stream<CarMPGEntry> alphabitized = strom.sorted((s1, s2)->{
 			return s1.carName.compareTo(s2.carName);
 		});
 		alphabitized.forEach((s)->{
 			System.out.println(s.carName);
 		});
+		Stream<CarMPGEntry> storm = arey.stream(); //#4
+		
 	}
 	
 	public static ArrayList<CarMPGEntry> readCarMPGEntryDataFromFile(){
