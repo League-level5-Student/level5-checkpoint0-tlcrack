@@ -32,7 +32,20 @@ public class Checkpoint {
 		ArrayList<CarMPGEntry> arey = readCarMPGEntryDataFromFile();
 		Stream<CarMPGEntry> strem = arey.stream();
 		
-		
+		strem.forEach((s)->{
+			System.out.println(s);
+		});
+		Stream<CarMPGEntry> stram = arey.stream();
+		stram.forEach((s)->{
+			System.out.println(s.mpg);
+		});
+		Stream<CarMPGEntry> strom = arey.stream();
+		Stream<CarMPGEntry> alphabitized = strom.sorted((s1, s2)->{
+			return s1.carName.compareTo(s2.carName);
+		});
+		alphabitized.forEach((s)->{
+			System.out.println(s.carName);
+		});
 	}
 	
 	public static ArrayList<CarMPGEntry> readCarMPGEntryDataFromFile(){
